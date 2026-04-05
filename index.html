@@ -30,30 +30,16 @@
       z-index: 100;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-    #discord-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 24px rgba(88,101,242,0.6);
-    }
+    #discord-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(88,101,242,0.6); }
     #discord-btn svg { width: 28px; height: 28px; }
 
     /* ── Discord popup ── */
-    #discord-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-    }
+    #discord-overlay { display: none; position: fixed; inset: 0; z-index: 200; }
     #discord-overlay.open { display: block; }
-    #discord-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-      backdrop-filter: blur(4px);
-    }
+    #discord-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.35); backdrop-filter: blur(4px); }
     #discord-card {
       position: absolute;
-      top: 84px;
-      right: 20px;
+      top: 84px; right: 20px;
       width: 300px;
       background: #36393f;
       border-radius: 16px;
@@ -64,48 +50,24 @@
     }
     @keyframes popIn {
       from { opacity: 0; transform: scale(0.92) translateY(-8px); }
-      to   { opacity: 1; transform: scale(1)    translateY(0); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
     }
     #discord-card .dc-logo {
-      width: 64px;
-      height: 64px;
-      background: #5865F2;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 64px; height: 64px;
+      background: #5865F2; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
       margin: 0 auto 16px;
     }
     #discord-card .dc-logo svg { width: 36px; height: 36px; }
-    #discord-card h3 {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    #discord-card p {
-      color: #b9bbbe;
-      font-size: 0.88rem;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
+    #discord-card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    #discord-card p { color: #b9bbbe; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px; }
     #discord-card a.join-btn {
-      display: block;
-      background: #5865F2;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 12px;
-      border-radius: 10px;
-      transition: background 0.15s;
+      display: block; background: #5865F2; color: #fff;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      padding: 12px; border-radius: 10px; transition: background 0.15s;
     }
     #discord-card a.join-btn:hover { background: #4752c4; }
-    #discord-card .member-count {
-      margin-top: 12px;
-      font-size: 0.78rem;
-      color: #72767d;
-    }
+    #discord-card .member-count { margin-top: 12px; font-size: 0.78rem; color: #72767d; }
 
     /* ── Header ── */
     header {
@@ -118,107 +80,128 @@
       gap: 40px;
       overflow: hidden;
     }
-
-    /* Left column */
     .header-left {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 40px;
-      min-width: 0;
+      flex: 1; display: flex; flex-direction: column;
+      justify-content: flex-end; padding-bottom: 40px; min-width: 0;
     }
     .header-left pre {
       font-family: "Courier New", Courier, monospace;
       font-size: clamp(5px, 1.5vw, 13px);
-      line-height: 1.2;
-      letter-spacing: 0;
-      display: block;
-      text-align: left;
-      margin-bottom: 20px;
-      white-space: pre;
+      line-height: 1.2; letter-spacing: 0;
+      display: block; text-align: left;
+      margin-bottom: 20px; white-space: pre;
     }
-    .header-left p {
-      font-size: 1rem;
-      color: #aeaeb2;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
+    .header-left p { font-size: 1rem; color: #aeaeb2; line-height: 1.5; margin-bottom: 24px; }
     .appstore-badge img { height: 40px; }
-
-    /* Right column */
-    .header-right {
-      display: flex;
-      align-items: flex-end;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-    .transport-icon {
-      width: 88px;
-      height: 88px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
+    .header-right { display: flex; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+    .transport-icon { width: 88px; height: 88px; display: flex; align-items: flex-end; justify-content: center; }
     .transport-icon img { width: 100%; height: 100%; object-fit: contain; }
 
+    /* ── Main two-column layout ── */
+    .content-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ── Left: features + support ── */
+    .content-left { display: flex; flex-direction: column; gap: 48px; }
+    h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: #1c1c1e; }
+    ul { list-style: none; display: grid; gap: 12px; }
+    ul li {
+      background: #fff; border-radius: 12px;
+      padding: 16px 20px; font-size: 0.95rem; line-height: 1.5;
+    }
+    ul li strong { display: block; margin-bottom: 2px; }
+    .support {
+      background: #fff; border-radius: 16px;
+      padding: 24px; text-align: center;
+    }
+    .support a { color: #007aff; text-decoration: none; font-weight: 600; }
+
+    /* ── Right: phone carousel ── */
+    .content-right {
+      position: sticky;
+      top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Phone mockup */
+    .phone-wrap {
+      position: relative;
+      width: min(260px, 100%);
+      aspect-ratio: 1022 / 2082;
+      filter: drop-shadow(0 24px 60px rgba(0,0,0,0.22));
+    }
+    .phone-wrap img.frame {
+      display: block; width: 100%; height: 100%;
+      position: relative; z-index: 2;
+    }
+    .phone-screen {
+      position: absolute;
+      left: calc(52 / 1022 * 100%);
+      top: calc(46 / 2082 * 100%);
+      width: calc(918 / 1022 * 100%);
+      height: calc(1990 / 2082 * 100%);
+      border-radius: calc(126 / 918 * 100%) / calc(126 / 1990 * 100%);
+      overflow: hidden;
+      z-index: 1;
+      background: #000;
+    }
+    .phone-screen img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+    .phone-screen img.active { opacity: 1; }
+
+    /* Dots */
+    .carousel-dots {
+      display: flex; gap: 8px; align-items: center;
+    }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #c7c7cc;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.2s;
+      padding: 0;
+    }
+    .dot.active { background: #1c1c1e; transform: scale(1.25); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 24px;
+      font-size: 0.8rem; color: #8e8e93;
+      border-top: 1px solid #e5e5ea;
+    }
+    footer a { color: #8e8e93; }
+
     /* ── Responsive ── */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 40px 24px 0;
-        gap: 24px;
+    @media (max-width: 860px) {
+      .content-wrap {
+        grid-template-columns: 1fr;
+        gap: 48px; padding: 48px 24px;
       }
+      .content-right { position: static; }
+      .phone-wrap { width: min(220px, 60%); }
+    }
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; padding: 40px 24px 0; gap: 24px; }
       .header-left { padding-bottom: 0; }
       .header-right { align-self: flex-end; }
       .transport-icon { width: 64px; height: 64px; }
       #discord-card { right: 12px; width: calc(100vw - 24px); }
     }
-
-    /* ── Content ── */
-    section {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-    h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #1c1c1e;
-    }
-    ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-    ul li {
-      background: #fff;
-      border-radius: 12px;
-      padding: 16px 20px;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    ul li strong { display: block; margin-bottom: 2px; }
-    .support {
-      background: #fff;
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-    }
-    .support a {
-      color: #007aff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 0.8rem;
-      color: #8e8e93;
-    }
-    footer a { color: #8e8e93; }
   </style>
 </head>
 <body>
@@ -230,7 +213,7 @@
     </svg>
   </button>
 
-  <!-- ── Discord popup overlay ── -->
+  <!-- ── Discord popup ── -->
   <div id="discord-overlay" onclick="handleOverlayClick(event)">
     <div id="discord-backdrop"></div>
     <div id="discord-card">
@@ -241,15 +224,13 @@
       </div>
       <h3>Join Pendler on Discord</h3>
       <p>Got a question, found a bug, or just want to chat about Danish transit? Come join us.</p>
-      <a class="join-btn" href="https://discord.gg/MmyCD9X4Fs" target="_blank" rel="noopener">
-        Join the community →
-      </a>
+      <a class="join-btn" href="https://discord.gg/MmyCD9X4Fs" target="_blank" rel="noopener">Join the community →</a>
       <p class="member-count">discord.gg/MmyCD9X4Fs</p>
     </div>
   </div>
 
+  <!-- ── Header ── -->
   <header>
-    <!-- Left: wordmark + subtitle + App Store badge -->
     <div class="header-left">
       <pre>
 ██████╗ ███████╗███╗   ██╗██████╗ ██╗     ███████╗██████╗
@@ -267,8 +248,6 @@
       </div>
       -->
     </div>
-
-    <!-- Right: transport icons flush to bottom -->
     <div class="header-right">
       <div class="transport-icon"><img src="bus.png" alt="Bus" /></div>
       <div class="transport-icon"><img src="metro.png" alt="Metro" /></div>
@@ -276,58 +255,109 @@
     </div>
   </header>
 
-  <section>
-    <h2>Features</h2>
-    <ul>
-      <li>
-        <strong>Live departures</strong>
-        See real-time departures from your favorite stations, powered by Rejseplanen.
-      </li>
-      <li>
-        <strong>Map search</strong>
-        Browse stops on a map and add them to your favorites with one tap.
-      </li>
-      <li>
-        <strong>Commute schedules</strong>
-        Set up morning and evening schedules — the app shows the right lines at the right time.
-      </li>
-      <li>
-        <strong>Widgets & Live Activity</strong>
-        See the next departure from your home screen, lock screen, or Dynamic Island.
-      </li>
-      <li>
-        <strong>Works offline</strong>
-        Cached departures keep widgets up to date even when the app is in the background.
-      </li>
-    </ul>
-  </section>
+  <!-- ── Two-column content ── -->
+  <div class="content-wrap">
 
-  <section>
-    <h2>Support</h2>
-    <div class="support">
-      <p>Have a question or found a bug?<br />
-      Join us on <a href="https://discord.gg/MmyCD9X4Fs">Discord</a>,
-      open an issue on <a href="https://github.com/baixianger/pendler-app/issues">GitHub</a>,
-      or email <a href="mailto:crea.bai@gmail.com">crea.bai@gmail.com</a>.</p>
+    <!-- Left: features + support -->
+    <div class="content-left">
+      <div>
+        <h2>Features</h2>
+        <ul>
+          <li>
+            <strong>Live departures</strong>
+            See real-time departures from your favorite stations, powered by Rejseplanen.
+          </li>
+          <li>
+            <strong>Map search</strong>
+            Browse stops on a map and add them to your favorites with one tap.
+          </li>
+          <li>
+            <strong>Commute schedules</strong>
+            Set up morning and evening schedules — the app shows the right lines at the right time.
+          </li>
+          <li>
+            <strong>Widgets & Live Activity</strong>
+            See the next departure from your home screen, lock screen, or Dynamic Island.
+          </li>
+          <li>
+            <strong>Works offline</strong>
+            Cached departures keep widgets up to date even when the app is in the background.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Support</h2>
+        <div class="support">
+          <p>Have a question or found a bug?<br />
+          Join us on <a href="https://discord.gg/MmyCD9X4Fs">Discord</a>,
+          open an issue on <a href="https://github.com/baixianger/pendler-app/issues">GitHub</a>,
+          or email <a href="mailto:crea.bai@gmail.com">crea.bai@gmail.com</a>.</p>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- Right: phone carousel -->
+    <div class="content-right">
+      <div class="phone-wrap">
+        <img class="frame" src="mockup.png" alt="" draggable="false" />
+        <div class="phone-screen" id="carousel-screen">
+          <img src="screenshots/departure-board.png"  alt="Departure board"   class="active" />
+          <img src="screenshots/map-search.png"        alt="Map search"        />
+          <img src="screenshots/add-station.png"       alt="Add station"       />
+          <img src="screenshots/settings.png"          alt="Commute settings"  />
+          <img src="screenshots/home-screen-widget.png" alt="Home screen widget" />
+        </div>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+
+  </div>
 
   <footer>
     <p>&copy; 2026 Pendler &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
   </footer>
 
   <script>
-    function toggleDiscord() {
-      document.getElementById('discord-overlay').classList.toggle('open');
-    }
+    // ── Discord popup
+    function toggleDiscord() { document.getElementById('discord-overlay').classList.toggle('open'); }
     function handleOverlayClick(e) {
-      if (e.target === document.getElementById('discord-backdrop')) {
+      if (e.target === document.getElementById('discord-backdrop'))
         document.getElementById('discord-overlay').classList.remove('open');
-      }
     }
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape') document.getElementById('discord-overlay').classList.remove('open');
     });
+
+    // ── Carousel
+    const slides = Array.from(document.querySelectorAll('#carousel-screen img'));
+    const dotsEl = document.getElementById('carousel-dots');
+    let current = 0, timer;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', 'Slide ' + (i + 1));
+      btn.onclick = () => goTo(i);
+      dotsEl.appendChild(btn);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsEl.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsEl.children[current].classList.add('active');
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 3200);
+    }
+
+    resetTimer();
   </script>
 </body>
 </html>
