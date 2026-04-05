@@ -123,46 +123,32 @@
     }
     .support a { color: #007aff; text-decoration: none; font-weight: 600; }
 
-    /* ── Right: phone carousel ── */
+    /* ── Right: marketing carousel ── */
     .content-right {
       position: sticky;
       top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
-    /* Phone mockup */
-    .phone-wrap {
+    .carousel-frame {
       position: relative;
-      width: min(260px, 100%);
-      aspect-ratio: 1022 / 2082;
-      filter: drop-shadow(0 24px 60px rgba(0,0,0,0.22));
-    }
-    .phone-wrap img.frame {
-      display: block; width: 100%; height: 100%;
-      position: relative; z-index: 2;
-    }
-    .phone-screen {
-      position: absolute;
-      left: calc(52 / 1022 * 100%);
-      top: calc(46 / 2082 * 100%);
-      width: calc(918 / 1022 * 100%);
-      height: calc(1990 / 2082 * 100%);
-      border-radius: calc(126 / 918 * 100%) / calc(126 / 1990 * 100%);
+      width: min(280px, 100%);
+      aspect-ratio: 1284 / 2778;
+      border-radius: 36px;
       overflow: hidden;
-      z-index: 1;
-      background: #000;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.28);
     }
-    .phone-screen img {
+    .carousel-frame img {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
-      object-fit: cover; object-position: top;
+      object-fit: cover;
       transition: opacity 0.5s ease;
       opacity: 0;
     }
-    .phone-screen img.active { opacity: 1; }
+    .carousel-frame img.active { opacity: 1; }
 
     /* Dots */
     .carousel-dots {
@@ -297,17 +283,14 @@
       </div>
     </div>
 
-    <!-- Right: phone carousel -->
+    <!-- Right: marketing screenshot carousel -->
     <div class="content-right">
-      <div class="phone-wrap">
-        <img class="frame" src="mockup.png" alt="" draggable="false" />
-        <div class="phone-screen" id="carousel-screen">
-          <img src="screenshots/departure-board.png"  alt="Departure board"   class="active" />
-          <img src="screenshots/map-search.png"        alt="Map search"        />
-          <img src="screenshots/add-station.png"       alt="Add station"       />
-          <img src="screenshots/settings.png"          alt="Commute settings"  />
-          <img src="screenshots/home-screen-widget.png" alt="Home screen widget" />
-        </div>
+      <div class="carousel-frame" id="carousel-screen">
+        <img src="marketing/01-hero.png"          alt="Never miss your train" class="active" />
+        <img src="marketing/02-live-activity.png" alt="Always on screen" />
+        <img src="marketing/03-map.png"           alt="Find stops on the map" />
+        <img src="marketing/04-schedule.png"      alt="Your lines, your schedule" />
+        <img src="marketing/05-download.png"      alt="Download Pendler" />
       </div>
       <div class="carousel-dots" id="carousel-dots"></div>
     </div>
