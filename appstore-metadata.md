@@ -4,7 +4,7 @@
 
 ## English (en-US)
 
-**Name:** Pendler  
+**Name:** Pendler: Danish Transit  
 **Subtitle:** Danish Transit Departures
 
 **Keywords** (≤100 chars):  
@@ -39,7 +39,7 @@ Join the community on Discord: discord.gg/MmyCD9X4Fs
 
 ## Danish (da)
 
-**Name:** Pendler  
+**Name:** Pendler: Danish Transit  
 **Subtitle:** Danske afgange i realtid
 
 **Keywords** (≤100 chars):  
@@ -74,7 +74,7 @@ Deltag i fællesskabet på Discord: discord.gg/MmyCD9X4Fs
 
 ## Simplified Chinese (zh-Hans)
 
-**Name:** Pendler  
+**Name:** Pendler: Danish Transit  
 **Subtitle:** 丹麦实时公共交通
 
 **Keywords** (≤100 chars):  
