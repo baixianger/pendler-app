@@ -14,7 +14,7 @@
 
 Pendler shows real-time departures from your favorite bus, metro, S-tog, and train stations in Denmark.
 
-Rejseplanen is great for trip planning — but sometimes you just want to check when the next 5A leaves, without planning a whole journey.
+Rejseplanen is a great app for trip planning — but sometimes we just want to know when the next bus leaves.
 
 **Live departures**
 See up-to-the-minute departures from your saved stations, powered by Rejseplanen.
