@@ -7,6 +7,9 @@
 **Name:** Pendler: Danish Transit  
 **Subtitle:** Danish Transit Departures
 
+**Promotional Text** (≤170 chars):  
+`Rejseplanen's little brother.`
+
 **Keywords** (≤100 chars):  
 `rejseplanen,bus,metro,s-tog,tog,denmark,transit,departure,dsb,commute,widget,copenhagen`
 
