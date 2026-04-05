@@ -37,6 +37,24 @@
       margin-top: 28px;
     }
     .badge img { height: 44px; }
+    .transport-icons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .transport-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .transport-icon.bus   { background: #FFD400; color: #1c1c1e; }
+    .transport-icon.metro { background: #0066CC; color: #fff; }
+    .transport-icon.stog  { background: #E1251B; color: #fff; }
     section {
       max-width: 640px;
       margin: 0 auto;
@@ -91,6 +109,11 @@
 ██║     ███████╗██║ ╚████║██████╔╝███████╗███████╗██║  ██║
 ╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝</pre>
     <p>Real-time Danish transit departures for bus, metro, S-tog and train — right on your iPhone.</p>
+    <div class="transport-icons">
+      <div class="transport-icon bus">🚌</div>
+      <div class="transport-icon metro">🚇</div>
+      <div class="transport-icon stog">🚆</div>
+    </div>
     <!-- Uncomment when live on App Store:
     <div class="badge">
       <a href="https://apps.apple.com/app/idXXXXXXXXX">
