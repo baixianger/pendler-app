@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendler – Danish Transit Departures</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f2f2f7;
+      color: #1c1c1e;
+    }
+    header {
+      background: #1c1c1e;
+      color: #f2f2f7;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+    header pre {
+      font-family: "Courier New", Courier, monospace;
+      font-size: clamp(5px, 2.2vw, 14px);
+      line-height: 1.2;
+      letter-spacing: 0;
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #aeaeb2;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 28px;
+    }
+    .badge img { height: 44px; }
+    section {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1c1c1e;
+    }
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    ul li {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    ul li strong { display: block; margin-bottom: 2px; }
+    .support {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .support a {
+      color: #007aff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: #8e8e93;
+    }
+    footer a { color: #8e8e93; }
+  </style>
+</head>
+<body>
+  <header>
+    <pre>
+██████╗ ███████╗███╗   ██╗██████╗ ██╗     ███████╗██████╗
+██╔══██╗██╔════╝████╗  ██║██╔══██╗██║     ██╔════╝██╔══██╗
+██████╔╝█████╗  ██╔██╗ ██║██║  ██║██║     █████╗  ██████╔╝
+██╔═══╝ ██╔══╝  ██║╚██╗██║██║  ██║██║     ██╔══╝  ██╔══██╗
+██║     ███████╗██║ ╚████║██████╔╝███████╗███████╗██║  ██║
+╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝</pre>
+    <p>Real-time Danish transit departures for bus, metro, S-tog and train — right on your iPhone.</p>
+    <!-- Uncomment when live on App Store:
+    <div class="badge">
+      <a href="https://apps.apple.com/app/idXXXXXXXXX">
+        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
+      </a>
+    </div>
+    -->
+  </header>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>
+        <strong>Live departures</strong>
+        See real-time departures from your favorite stations, powered by Rejseplanen.
+      </li>
+      <li>
+        <strong>Map search</strong>
+        Browse stops on a map and add them to your favorites with one tap.
+      </li>
+      <li>
+        <strong>Commute schedules</strong>
+        Set up morning and evening schedules — the app shows the right lines at the right time.
+      </li>
+      <li>
+        <strong>Widgets & Live Activity</strong>
+        See the next departure from your home screen, lock screen, or Dynamic Island.
+      </li>
+      <li>
+        <strong>Works offline</strong>
+        Cached departures keep widgets up to date even when the app is in the background.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Support</h2>
+    <div class="support">
+      <p>Have a question or found a bug?<br />
+      Open an issue on <a href="https://github.com/baixianger/pendler-app/issues">GitHub</a>
+      or email <a href="mailto:crea.bai@gmail.com">crea.bai@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Pendler &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
