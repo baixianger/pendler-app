@@ -112,6 +112,8 @@ Rejseplanen 适合规划完整行程——但有时候你只是想知道下一�
 
 ## URLs
 
+- **App Store URL:** https://apps.apple.com/dk/app/pendler-danish-transit/id6761691300
+- **App Store ID:** `6761691300`
 - **Support URL:** https://baixianger.github.io/pendler-app/
 - **Privacy Policy URL:** https://baixianger.github.io/pendler-app/privacy.html
 - **Marketing URL:** https://baixianger.github.io/pendler-app/

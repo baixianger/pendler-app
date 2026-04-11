@@ -99,6 +99,34 @@
       margin-bottom: 20px; white-space: pre;
     }
     .header-left p { font-size: 1rem; color: #aeaeb2; line-height: 1.5; margin-bottom: 24px; }
+    .release-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      color: #d1d1d6;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .release-notice:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .release-notice .badge {
+      background: #34c759;
+      color: #0b0b0b;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
     .appstore-badge img { height: 40px; }
     .header-right { display: flex; align-items: flex-end; gap: 10px; flex-shrink: 0; }
     .transport-icon { width: 88px; height: 88px; display: flex; align-items: flex-end; justify-content: center; }
@@ -234,13 +262,16 @@
 ╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝</pre>
       <p>Real-time Danish transit departures for bus, metro, S-tog and train — right on your iPhone.</p>
       <p>Rejseplanen is a great app for trip planning — but sometimes we just want to know when the next bus leaves.</p>
-      <!-- Uncomment when live on App Store:
+      <a class="release-notice" href="releases.html">
+        <span class="badge">New</span>
+        <span>1.0.1 — offline mode &amp; connectivity fix</span>
+        <span>→</span>
+      </a>
       <div class="appstore-badge">
-        <a href="https://apps.apple.com/app/idXXXXXXXXX">
+        <a href="https://apps.apple.com/dk/app/pendler-danish-transit/id6761691300" target="_blank" rel="noopener">
           <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
         </a>
       </div>
-      -->
     </div>
     <div class="header-right">
       <div class="transport-icon"><img src="assets/bus.png" alt="Bus" /></div>
@@ -306,7 +337,11 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Pendler &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+    <p>
+      &copy; 2026 Pendler &nbsp;·&nbsp;
+      <a href="releases.html">Release Notes</a> &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
   </footer>
 
   <script>
