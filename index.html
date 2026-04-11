@@ -40,6 +40,33 @@
     #discord-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(88,101,242,0.6); }
     #discord-btn svg { width: 28px; height: 28px; }
 
+    /* ── App Store FAB (bottom-right) ── */
+    #appstore-fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      z-index: 100;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      overflow: hidden;
+    }
+    #appstore-fab:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    }
+    #appstore-fab img {
+      display: block;
+      height: 52px;
+      width: auto;
+    }
+    @media (max-width: 600px) {
+      #appstore-fab { bottom: 14px; right: 14px; }
+      #appstore-fab img { height: 44px; }
+    }
+
     /* ── Discord popup ── */
     #discord-overlay { display: none; position: fixed; inset: 0; z-index: 200; }
     #discord-overlay.open { display: block; }
@@ -227,6 +254,16 @@
 </head>
 <body>
 
+  <!-- ── App Store FAB (bottom-right) ── -->
+  <a id="appstore-fab"
+     href="https://apps.apple.com/dk/app/pendler-danish-transit/id6761691300"
+     target="_blank"
+     rel="noopener"
+     aria-label="Download Pendler on the App Store">
+    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+         alt="Download on the App Store" />
+  </a>
+
   <!-- ── Discord FAB ── -->
   <button id="discord-btn" aria-label="Join Discord" onclick="toggleDiscord()">
     <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -267,11 +304,6 @@
         <span>1.0.1 — offline mode &amp; connectivity fix</span>
         <span>→</span>
       </a>
-      <div class="appstore-badge">
-        <a href="https://apps.apple.com/dk/app/pendler-danish-transit/id6761691300" target="_blank" rel="noopener">
-          <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
-        </a>
-      </div>
     </div>
     <div class="header-right">
       <div class="transport-icon"><img src="assets/bus.png" alt="Bus" /></div>
