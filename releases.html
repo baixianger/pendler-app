@@ -194,6 +194,20 @@
       #appstore-fab { bottom: 14px; right: 14px; }
       #appstore-fab img { height: 44px; }
     }
+
+    /* ── Dark scheme ── */
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      .release { background: #2c2c2e; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+      .release-head { border-bottom-color: #3a3a3c; }
+      .lang-tabs button { background: #3a3a3c; color: #d1d1d6; }
+      .lang-tabs button:hover { background: #48484a; }
+      .lang-tabs button.active { background: #f2f2f7; color: #1c1c1e; }
+      .lang-content li { background: #3a3a3c; }
+      .lang-content li strong { color: #f2f2f7; }
+      footer { border-top-color: #3a3a3c; }
+      footer a:hover { color: #f2f2f7; }
+    }
   </style>
 </head>
 <body>
@@ -204,7 +218,7 @@
      target="_blank"
      rel="noopener"
      aria-label="Download Pendler on the App Store">
-    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+    <img src="assets/appstore-badge.svg"
          alt="Download on the App Store" />
   </a>
 

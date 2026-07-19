@@ -250,6 +250,18 @@
       .transport-icon { width: 64px; height: 64px; }
       #discord-card { right: 12px; width: calc(100vw - 24px); }
     }
+
+    /* ── Dark scheme ── */
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      h2 { color: #f2f2f7; }
+      ul li { background: #2c2c2e; }
+      .support { background: #2c2c2e; }
+      .support a { color: #0a84ff; }
+      footer { border-top-color: #3a3a3c; }
+      .dot { background: #48484a; }
+      .dot.active { background: #f2f2f7; }
+    }
   </style>
 </head>
 <body>
@@ -260,7 +272,7 @@
      target="_blank"
      rel="noopener"
      aria-label="Download Pendler on the App Store">
-    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+    <img src="assets/appstore-badge.svg"
          alt="Download on the App Store" />
   </a>
 

@@ -22,6 +22,12 @@
     a { color: #007aff; text-decoration: none; }
     footer { margin-top: 48px; font-size: 0.8rem; color: #8e8e93; }
     footer a { color: #8e8e93; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f2f2f7; }
+      p, ul li { color: #c7c7cc; }
+      a { color: #0a84ff; }
+      footer a { color: #8e8e93; }
+    }
   </style>
 </head>
 <body>
@@ -45,7 +51,7 @@
     <p>This data is stored in the app's private container and the shared App Group (<code>group.me.pai.pendler</code>) used to share data with widgets and Live Activities.</p>
 
     <h2>Location</h2>
-    <p>The app may request access to your location to show nearby transit stops on the map. Location data is used only in the moment to center the map and perform a nearby-stop search — it is never stored or transmitted.</p>
+    <p>The app may request access to your location to show nearby transit stops on the map. Location data is used only in the moment to center the map and perform a nearby-stop search — it is never stored, and it leaves the device only as the coordinates sent to Rejseplanen to find stops near you (see Third-Party Services below).</p>
 
     <h2>Third-Party Services</h2>
     <p>Departure data is fetched from the <strong>Rejseplanen API</strong> (operated by the Danish public transport authority). Requests include geographic coordinates or stop IDs to retrieve departure boards. No personal data is included in these requests. Rejseplanen's own privacy policy applies to their service.</p>
